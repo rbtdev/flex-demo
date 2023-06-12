@@ -1,0 +1,89 @@
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    function setPopoutOpen (e, setOpen) {
+      e.stopPropagation();
+      e.preventDefault();
+      const menu = document.querySelector('#popout');
+      if (setOpen) {
+        menu.style.display = 'flex';
+        menu.style.flexDirection = 'column';
+        menuOpen = true;
+      } else {
+        menu.style.display = 'none';
+        menuOpen = false;
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <div class='container'>
+    <div id = 'popout' class = 'popout'>
+      <div onclick = "setPopoutOpen(event, false)">
+        Close
+      </div>
+      <div>
+        Item 1
+      </div>
+      <div>
+        Item 2
+      </div>
+      <div>
+        Item 3
+      </div>
+    </div>
+    <div class='app-bar'>
+      <div class='menu left'>
+        <div class='menu-item hamburger' onclick = 'setPopoutOpen(event, true)'>
+          <div class = 'patty'></div>
+          <div class = 'patty'></div>
+          <div class = 'patty'></div>
+        </div>
+        <div class='menu-item'>
+          item 1 left
+        </div>
+      </div>
+      <div class='menu right'>
+        <div class='menu-item'>
+          item 1
+        </div>
+        <div class='menu-item'>
+          item 2
+        </div>
+        <div class='menu-item'>
+          item 3
+        </div>
+        <div class='menu-item'>
+          item 4
+        </div>
+      </div>
+    </div>
+    <div class='page'>
+      <div class='side-bar'>
+        div 1
+      </div>
+      <div class='scrollable'>
+        <div class='tall'>
+          div 2 kasjas k djalksjd ajdaldj
+        </div>
+      </div>
+      <div class='bad-tall'>
+        div 3
+      </div>
+      <div>
+        div 4
+      </div>
+      <div>
+        div 5
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
